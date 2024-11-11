@@ -3,7 +3,17 @@ role_name_check: 1
 driver:
   name: podman
 platforms:
-  - name: instance
+  - name: radarr_latest
+    image: quay.io/speakintelnet/pinp-molecule
+    privileged: true
+    pre_build_image: true
+    systemd: true
+  - name: radarr_develop
+    image: quay.io/speakintelnet/pinp-molecule
+    privileged: true
+    pre_build_image: true
+    systemd: true
+  - name: radarr_nightly
     image: quay.io/speakintelnet/pinp-molecule
     privileged: true
     pre_build_image: true
@@ -12,7 +22,14 @@ provisioner:
   name: ansible
   inventory:
     host_vars:
-      instance:
+      radarr_latest:
         ansible_user: podman
+        radarr_version: latest
+      radarr_develop:
+        ansible_user: podman
+        radarr_version: develop
+      radarr_nightly:
+        ansible_user: podman
+        radarr_version: nightly
 verifier:
   name: ansible

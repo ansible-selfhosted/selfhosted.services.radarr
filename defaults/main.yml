@@ -2,4 +2,5 @@
 radarr_config_path: ~/.config/radarr/
 radarr_data_path: ~/.local/share/containers/storage/media
 radarr_timezone: Etc/UTC
+radarr_version: latest
 radarr_web_port: 7878

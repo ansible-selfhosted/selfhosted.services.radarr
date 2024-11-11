@@ -28,6 +28,16 @@ argument_specs:
         default: Etc/UTC
         description:
           - The timezone for the radarr service
+      radarr_version:
+        type: str
+        required: false
+        default: latest
+        description:
+          - The version of the radarr container
+        choices:
+          - latest
+          - develop
+          - nightly
       radarr_web_port:
         type: int
         required: false

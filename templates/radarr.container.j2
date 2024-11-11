@@ -7,7 +7,7 @@ ContainerName=radarr
 Environment=PUID=1000
 Environment=PGID=1000
 Environment=TZ={{ radarr_timezone }}
-Image=lscr.io/linuxserver/radarr:latest
+Image=lscr.io/linuxserver/radarr:{{ radarr_version }}
 PublishPort={{ radarr_web_port }}:7878
 Volume={{ radarr_config_path }}:/config
 Volume={{ radarr_data_path }}:/data
