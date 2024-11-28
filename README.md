@@ -24,7 +24,7 @@ A role to deploy Radarr using rootless Podman with systemd.
 |radarr_config_path|The path to the radarr configuration directory|str|False|~/.config/radarr/|
 |radarr_data_path|The path to the radarr data directory<br>It is recommended to share the same data directory with other media managing services|str|False|~/.local/share/containers/storage/media|
 |radarr_timezone|The timezone for the radarr service|str|False|Etc/UTC|
-|radarr_version|The version of the radarr container|str|False|latest|- latest<br>- develop<br>- nightly
+|radarr_version|The version of the radarr container|str|False|latest|<ul><li>latest</li><li>develop</li><li>nightly</li></ul>
 |radarr_web_port|The port for the web server|int|False|7878|
 
 
