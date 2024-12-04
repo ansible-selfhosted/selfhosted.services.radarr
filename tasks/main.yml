@@ -16,7 +16,6 @@
     path: "{{ item }}"
     state: directory
     mode: "0750"
-    recurse: true
   loop:
     - "{{ radarr_config_path }}"
     - "{{ radarr_data_path }}"
