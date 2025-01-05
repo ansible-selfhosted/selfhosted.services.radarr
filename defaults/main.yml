@@ -1,6 +1,11 @@
 ---
+radarr_additional_options: []
+radarr_config_label: ''
 radarr_config_path: ~/.config/radarr/
+radarr_data_label: ''
 radarr_data_path: ~/.local/share/containers/storage/media
+radarr_puid: 1000
+radarr_pgid: 1000
 radarr_timezone: Etc/UTC
 radarr_version: latest
 radarr_web_port: 7878

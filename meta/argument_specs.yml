@@ -9,12 +9,34 @@ argument_specs:
     author:
       - SpeakinTelnet
     options:
+      radarr_additional_options:
+        type: list
+        required: false
+        default: []
+        description:
+          - List of additional key=value for the quadlet container
+          - 'ex: - "Network=custom.network"'
+          - Can also be used to leave comments by preceding with a '#'
+      radarr_config_label:
+        type: str
+        required: false
+        default: ""
+        description:
+          - The labels for to the radarr config directory
+          - "Comma separated values (ex: rw,Z)"
       radarr_config_path:
         type: str
         required: false
         default: ~/.config/radarr/
         description:
           - The path to the radarr configuration directory
+      radarr_data_label:
+        type: str
+        required: false
+        default: ""
+        description:
+          - The labels for to the radarr data directory
+          - "Comma separated values (ex: rw,Z)"
       radarr_data_path:
         type: str
         required: false
@@ -22,6 +44,18 @@ argument_specs:
         description:
           - The path to the radarr data directory
           - It is recommended to share the same data directory with other media managing services
+      radarr_puid:
+        type: int
+        required: false
+        default: 1000
+        description:
+          - The user id to run the inside the radarr container
+      radarr_pgid:
+        type: int
+        required: false
+        default: 1000
+        description:
+          - The group id to run the inside the radarr container
       radarr_timezone:
         type: str
         required: false
